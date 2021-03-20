@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+        
+    </head>
+    <body>
+        <header>
+            <h1>Registro Máquina</h1>
+        </header>
+        <main>
+            <form method="POST" action="registroDatos.html">
+                <legend for="fieldName">Datos del Cliente</legend>
+                <fieldset id="fieldName">
+
+                    <legend for="clientName">Nombre</legend>
+                    <input id="clientName" type="text" name="clientName" placeholder="Nombre..." required autofocus autocapitalize="words"/>
+
+                    <legend for="clientNum">Num. Cliente</legend>
+                    <input id="clientNum" type="number" name="clientName" required/>
+
+                    <label for="phone">Teléfono</label>
+                    <input id="phone" type="tel" name="phone" required/>
+                </fieldset>
+                <legend for="fieldData">Datos de la Máquina</legend>
+                <fieldset id="fieldData">
+                    <legend for="fechaAlta">Fecha de Alta</legend>
+                    <input id="fechaAlta" type="date" name="fechaAlta" required/>
+
+                    <legend for="situation" >Situación</legend>
+                    <select id="situation" name="situation">
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                    </select>
+
+                    <legend for="brand">Marca</legend>
+                    <input id="brand" type="text" name="brand" placeholder="Marca..." required autocapitalize="words"/>
+
+                    <legend for="model">Modelo</legend>
+                    <input id="model" type="text" name="model" placeholder="Modelo..." required/>
+
+                    <legend for="machineType" >Tipo de máquina</legend>
+                    <select id="machineType" name="machineType">
+                        <option value="agua">Agua</option>
+                        <option value="limpiadores5">Limpiadores 5</option>
+                        <option value="limpiadores10">Limpiadores 10</option>
+                    </select>
+
+                    <input type="checkbox" id="sensorIncluded" name="sensorIncluded" value="sensorIncluded">
+                    <label for="sensorIncluded"> Incluye interfaz de sensores de peso</label>
+                </fieldset>
+                <legend for="locationField"></legend>
+                <fieldset id="locationField">
+                    <legend for="street">Calle</legend>
+                    <input id="street" type="text" name="street" placeholder="Calle 123" required autocapitalize="words"/>
+
+                    <legend for="colonia">Colonia</legend>
+                    <input id="colonia" type="text" name="colonia" placeholder="Colonia..." required autocapitalize="words"/>
+
+                    <legend for="street">Entre Calles</legend>
+                    <input id="entreCalles" type="text" name="entreCalles" placeholder="Entre Calles..." required autocapitalize="words"/>
+
+                    <legend for="cp">C.P.</legend>
+                    <input id="cp" type="number" name="cp" required/>
+                </fieldset>
+                <div class="widget">
+                    <br>
+                    <input class="ui-button ui-widget ui-corner-all" type="submit" name="submit" id="submit" value="submit"/>
+                </div>
+            </form>
+        </main>
+        <footer></footer>
+    </body>
+    <script src="Scripts/registerMachines.js"></script>
+</html>
