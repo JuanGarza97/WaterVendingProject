@@ -2,60 +2,67 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0%;
 }
 
-fieldset
-{
+fieldset {
     margin-left: auto;
     margin-right: auto;
 }
 
+
 /* Style inputs, select elements and textareas */
-input, select, textarea {
+
+input,
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-  }
-  
-  /* Style the label to display next to the inputs */
-  legend {
+}
+
+
+/* Style the label to display next to the inputs */
+
+legend {
     padding: 12px 12px 12px 0;
     display: inline-block;
-  }
-  
-  /* Style the submit button */
-  input[type=submit] {
+}
+
+
+/* Style the submit button */
+
+input[type=submit] {
     background-color: #3498db;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
+}
 
-  }
+input[type=submit] :hover {
+    background-color: #2980b9;
+}
 
-  input[type=submit] :hover {
-      background-color: #2980b9;
-  }
-  
-  form{
-      font-family: 'Times New Roman', Times, serif;
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      margin: auto;
-      margin-bottom: 2%;
-      max-width: 60%;
-      min-height: fit-content;
-      border-style: solid;
-      border-width: 1px;
-  }
+form {
+    /*font-family: 'Times New Roman', Times, serif;*/
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: auto;
+    margin-bottom: 2%;
+    max-width: 60%;
+    min-height: fit-content;
+    border-style: solid;
+    border-width: 1px;
+}
 
-  .formHeader
-{
-    background-color:#34495e;
+.formHeader {
+    background-color: #34495e;
     color: white;
     width: 100%;
     height: 100%;
@@ -65,39 +72,108 @@ input, select, textarea {
     margin-top: 0%;
 }
 
-  .formBody {
+.formBody {
     padding: 20px;
-  }
+}
 
-  .col-25 {
+.col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
-  }
-  
-  .col-75 {
+}
+
+.col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
-  }
+}
 
-  #sensorIncluded {
-      margin-top: 12px;
-      width: 25px;
-      height:25px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+#sensorIncluded {
+    margin-top: 12px;
+    width: 25px;
+    height: 25px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input {
-      width: 100%;
-      margin-top: 0;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input {
+        width: 100%;
+        margin-top: 0;
     }
-  }
+}
+
+#body-login,
+#body-register {
+    background-color: #edf0f5;
+}
+
+#cent {
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15%;
+    margin-left: -25%;
+}
+
+.f-login {
+    border: none;
+}
+
+#form-login {
+    box-shadow: 0 8px 9px rgb(0 0 0 / 10%), 0 9px 17px rgb(0 0 0 / 10%);
+}
+
+.tf-login {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.btn-login {
+    text-align: center;
+}
+
+.btn-login button {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 1em;
+    background-color: #3498db;
+    border: none;
+    font-weight: bold;
+    font-size: 12pt;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.widget input[type=submit] {
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+#pw-forgotten {
+    color: #3498db;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#pw-forgotten a:visited {
+    text-decoration: none;
+    color: #3498db;
+}

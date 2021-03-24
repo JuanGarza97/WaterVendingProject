@@ -1,161 +1,164 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-        <link rel="stylesheet" href="Styles/style.css" />
-        
-    </head>
-    <body>
-        <header>
-            
-        </header>
-        <main>
-            <form method="POST" action="registroDatos.html">
-                <h1 class="formHeader">Registro Máquina</h1>
-                <div class="formBody">
-                    <legend for="fieldName">Datos del Cliente</legend>
-                    <fieldset id="fieldName">
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="clientName">Nombre</legend>
-                            </div>
-                            <div class="col-75">
-                                <input id="clientName" onkeypress="return tabE(this,event)" type="text" name="clientName" placeholder="Nombre..." required autofocus autocapitalize="words"/>
-                            </div>
-                        </div>
 
-                        <div class="row">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="Styles/style.css" />
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <form method="POST" action="registroDatos.html">
+            <h1 class="formHeader">Registro Máquina</h1>
+            <div class="formBody">
+                <legend for="fieldName">Datos del Cliente</legend>
+                <fieldset id="fieldName">
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="clientName">Nombre</legend>
+                        </div>
+                        <div class="col-75">
+                            <input id="clientName" onkeypress="return tabE(this,event)" type="text" name="clientName" placeholder="Nombre..." required autofocus autocapitalize="words" />
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <div class="col-25">
                             <legend for="clientNum">Num. Cliente</legend>
                         </div>
-                        
-                        <div class="col-75">
-                            <input id="clientNum" onkeypress="return tabE(this,event)" type="text" name="clientName"  pattern="\d*" title="Numbers only, please." required/>
-                        </div>
-                        </div>
 
-                        <div class="row">
+                        <div class="col-75">
+                            <input id="clientNum" onkeypress="return tabE(this,event)" type="text" name="clientName" pattern="\d*" title="Numbers only, please." required/>
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <div class="col-25">
                             <legend for="phone">Teléfono</legend>
                         </div>
-                        
+
                         <div class="col-75">
                             <input id="phone" onkeypress="return tabE(this,event)" type="tel" name="phone" required/>
                         </div>
+                    </div>
+                </fieldset>
+                <legend for="fieldData">Datos de la Máquina</legend>
+                <fieldset id="fieldData">
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="fechaAlta">Fecha de Alta</legend>
                         </div>
-                    </fieldset>
-                    <legend for="fieldData">Datos de la Máquina</legend>
-                    <fieldset id="fieldData">
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="fechaAlta">Fecha de Alta</legend>
-                            </div>
-                            <div class="col-75">
-                                <input id="fechaAlta" onkeypress="return tabE(this,event)" type="date" name="fechaAlta" required/>
-                            </div>
+                        <div class="col-75">
+                            <input id="fechaAlta" onkeypress="return tabE(this,event)" type="date" name="fechaAlta" required/>
                         </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="situation" >Situación</legend>
-                            </div>
-                            <div class="col-75">
-                                <select id="situation" onkeypress="return tabE(this,event)" name="situation">
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="situation">Situación</legend>
+                        </div>
+                        <div class="col-75">
+                            <select id="situation" onkeypress="return tabE(this,event)" name="situation">
                                     <option value="activo">Activo</option>
                                     <option value="inactivo">Inactivo</option>
                                 </select>
-                            </div>
                         </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="brand">Marca</legend>
-                            </div>
-                            <div class="col-75">
-                                <input id="brand" onkeypress="return tabE(this,event)" type="text" name="brand" placeholder="Marca..." required autocapitalize="words"/>
-                            </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="brand">Marca</legend>
                         </div>
-
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="model">Modelo</legend>
-                            </div>
-                            <div class="col-75">
-                                <input id="model" onkeypress="return tabE(this,event)" type="text" name="model" placeholder="Modelo..." required/>
-                            </div>
+                        <div class="col-75">
+                            <input id="brand" onkeypress="return tabE(this,event)" type="text" name="brand" placeholder="Marca..." required autocapitalize="words" />
                         </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="machineType" >Tipo de máquina</legend>
-                            </div>
-                            <div class="col-75">
-                                <select id="machineType" onkeypress="return tabE(this,event)" name="machineType">
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="model">Modelo</legend>
+                        </div>
+                        <div class="col-75">
+                            <input id="model" onkeypress="return tabE(this,event)" type="text" name="model" placeholder="Modelo..." required/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="machineType">Tipo de máquina</legend>
+                        </div>
+                        <div class="col-75">
+                            <select id="machineType" onkeypress="return tabE(this,event)" name="machineType">
                                     <option value="agua">Agua</option>
                                     <option value="limpiadores5">Limpiadores 5</option>
                                     <option value="limpiadores10">Limpiadores 10</option>
                                 </select>
-                            </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="sensorIncluded"> Incluye interfaz de sensores de peso</legend>
-                            </div>
-                            <div class="col-75">
-                                <input type="checkbox" id="sensorIncluded" onkeypress="return tabE(this,event)" name="sensorIncluded" value="sensorIncluded">
-                            </div>
-                        </div>
-                    </fieldset>
-                    <legend for="locationField"></legend>
-                    <fieldset id="locationField">
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="street">Calle</legend>
-                            </div>
-                            <div class="col-75">
-                                <input id="street" onkeypress="return tabE(this,event)" type="text" name="street" placeholder="Calle 123" required autocapitalize="words"/>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="colonia">Colonia</legend>
-                            </div>
-                            <div class="col-75">
-                                <input id="colonia" onkeypress="return tabE(this,event)" type="text" name="colonia" placeholder="Colonia..." required autocapitalize="words"/>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="street">Entre Calles</legend>
-                            </div>
-                            <div class="col-75">
-                                <input id="entreCalles" onkeypress="return tabE(this,event)" type="text" name="entreCalles" placeholder="Entre Calles..." required autocapitalize="words"/>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-25">
-                                <legend for="cp">C.P.</legend>
-                            </div>
-                            <div class="col-75">
-                                <input id="cp" onkeypress="return tabE(this,event)" type="text" name="cp"  pattern="\d*" title="Numbers only, please." required/>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <div class="widget">
-                        <br>
-                        <input class="ui-button ui-widget ui-corner-all" type="submit" name="submit" id="submit" value="submit"/>
                     </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="sensorIncluded"> Incluye interfaz de sensores de peso</legend>
+                        </div>
+                        <div class="col-75">
+                            <input type="checkbox" id="sensorIncluded" onkeypress="return tabE(this,event)" name="sensorIncluded" value="sensorIncluded">
+                        </div>
+                    </div>
+                </fieldset>
+                <legend for="locationField"></legend>
+                <fieldset id="locationField">
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="street">Calle</legend>
+                        </div>
+                        <div class="col-75">
+                            <input id="street" onkeypress="return tabE(this,event)" type="text" name="street" placeholder="Calle 123" required autocapitalize="words" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="colonia">Colonia</legend>
+                        </div>
+                        <div class="col-75">
+                            <input id="colonia" onkeypress="return tabE(this,event)" type="text" name="colonia" placeholder="Colonia..." required autocapitalize="words" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="street">Entre Calles</legend>
+                        </div>
+                        <div class="col-75">
+                            <input id="entreCalles" onkeypress="return tabE(this,event)" type="text" name="entreCalles" placeholder="Entre Calles..." required autocapitalize="words" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="cp">C.P.</legend>
+                        </div>
+                        <div class="col-75">
+                            <input id="cp" onkeypress="return tabE(this,event)" type="text" name="cp" pattern="\d*" title="Numbers only, please." required/>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="widget">
+                    <br>
+                    <input class="ui-button ui-widget ui-corner-all" type="submit" name="submit" id="submit" value="Enviar" />
                 </div>
-            </form>
-        </main>
-        <footer></footer>
-    </body>
-    <script src="Scripts/registerMachines.js"></script>
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+<script src="Scripts/registerMachines.js"></script>
+
 </html>
