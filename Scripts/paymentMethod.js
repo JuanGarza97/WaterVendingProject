@@ -1,9 +1,4 @@
-const phoneInputField = document.querySelector("#phone");
-const phoneInput = window.intlTelInput(phoneInputField, {
-    preferredCountries: ["mx", "us", "co", "in", "de"],
-    utilsScript:
-    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-});
+
 
 const info = document.querySelector(".alert-info");
 
@@ -26,11 +21,3 @@ function tabE(obj,e){
    return false; 
     } 
    } 
-
-   function openNav() {
-    document.getElementById("mySidenav1").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav1").style.width = "0";
-  }

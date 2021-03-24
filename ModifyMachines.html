@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <header>
+
+    </header>
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
     <div id="mySidenav1" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -19,14 +22,25 @@
         <a href="RegisterMachines.html">Registro máquina</a>
         <a href="ModifyMachines.html">Modificar máquina</a>
     </div> 
-
-    <header>
-        
-    </header>
     <main>
-        <form method="POST" action="RegistroDatos.html">
-            <h1 class="formHeader">Registro Máquina</h1>
+
+        <form method="POST" action="ModifyDatos.html">
+            <h1 class="formHeader">Modificar Máquina</h1>
             <div class="formBody">
+                <legend for="fieldName">Máquina</legend>
+                <fieldset id="fieldMachine">
+                    <div class="row">
+                        <div class="col-25">
+                            <legend for="selMachine">Máquina a modificar</legend>
+                        </div>
+                        <div class="col-75">
+                            <select id="selMachine" onkeypress="return tabE(this,event)" name="selMachine">
+                                <option value="maquina1">Maquina1</option>
+                                <option value="maquina2">Maquina2</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
                 <legend for="fieldName">Datos del Cliente</legend>
                 <fieldset id="fieldName">
                     <div class="row">
