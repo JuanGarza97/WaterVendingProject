@@ -4,6 +4,7 @@
 
 body, html {
     padding: 0%;
+    margin:0%;
 }
 
 fieldset
@@ -59,7 +60,7 @@ input, select, textarea {
     padding-bottom: 20%;
 }
   
-  form{
+  .showData, form{
       font-family: 'Times New Roman', Times, serif;
       border-radius: 5px;
       background-color: #f2f2f2;
@@ -69,6 +70,21 @@ input, select, textarea {
       min-height: fit-content;
       border-style: solid;
       border-width: 1px;
+  }
+
+  .showData {
+    text-align: center;
+    padding:0;
+    min-height: 60%;
+    padding-bottom: 2%;
+  }
+
+  header {
+    margin: 0;
+    margin-bottom: 1%;
+    color:white;
+    background-color: #34495e;
+    padding: 1%;
   }
 
   .formHeader
@@ -178,3 +194,75 @@ input, select, textarea {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  #maquinaTable {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    min-width: 80%;
+    min-height: 50%;
+  }
+
+  #maquinaTable th {
+    background-color: #347199;
+    color: white;
+  }
+
+  #maquinaTable td, #maquinaTable th{
+    border: 1px black solid;
+    margin:0%;
+    min-width: 20%;
+  }
+
+  ul {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+  }
+
+  .toggle{
+    list-style-type:none;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left:15%
+}
+
+.toggle li {
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+   width:100px;
+   height:40px;
+   position:relative;
+}
+
+.toggle label, .toggle input {
+   display:block;
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+}
+
+.toggle input[type="radio"] {
+   opacity:0.011;
+   z-index:100;
+   padding: 5px;
+}
+
+.toggle input[type="radio"]:checked + label {
+   background:#3498db;
+   color: white;
+}
+
+.toggle label {
+    padding:5px;
+    border:1px solid rgb(71, 117, 170); 
+    cursor:pointer;
+   z-index:90;
+}
+
+.toggle label:hover {
+    background:#DDD;
+}
