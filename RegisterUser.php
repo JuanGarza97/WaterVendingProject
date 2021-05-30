@@ -46,7 +46,7 @@
                             <input id="email" onkeypress="return tabE(this,event)" type="email" name="email" placeholder="Email" required oninvalid="this.setCustomValidity('Ingrese su dirección de correo electrónico')" oninput="setCustomValidity('')" />
                         </div>
                     </div>
-                    <div id="invalid-email" class="row">
+                    <div id="invalid-data" class="row">
                         <div class="col-25">
                             <legend for="email"></legend>
                         </div>
@@ -166,7 +166,7 @@
 
         $('#login').click(function(e) {
             e.preventDefault();
-            window.location.href = "index.html";
+            window.location.href = "index.php";
         });
     });
 
@@ -236,10 +236,9 @@
                         console.log("Complete.");
                     })
             } else {
-                $('#invalid-email').show();
+                $('#invalid-data').show();
             }
-        }
-        else {
+        } else {
             return;
         }
     })
