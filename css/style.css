@@ -290,7 +290,7 @@ ul {
     background: #DDD;
 }
 
-#invalid-email {
+#invalid-data {
     display: none;
     width: 100%;
     margin-top: .25rem;
