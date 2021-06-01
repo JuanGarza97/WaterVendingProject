@@ -25,7 +25,7 @@
     </div> 
     </header>
     <main>
-        <form method="POST" action="RegistroDatos.html">
+        <form method="POST">
             <h1 class="formHeader">Registro Máquina</h1>
             <div class="formBody">
                 <legend for="fieldName">Datos del Cliente</legend>

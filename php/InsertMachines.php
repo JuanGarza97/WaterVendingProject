@@ -16,7 +16,7 @@
     $EntreCalles = $_POST['EntreCalles'];
     $CP = $_POST['CP'];    
 
-    $sql = "INSERT INTO machines (ClientName, ClientNum, Phone, MachineName, FechaAlta, Situation, Brand, Model, MachineType, SensorIncluded, Street, Colonia, EntreCalles, CP) VALUES('$ClientName', '$ClientNum', '$Phone', '$MachineName', TO_DATE('$FechaAlta', 'DD/MM/YYYY'), '$Situation', '$Brand', '$Model', '$MachineType', $SensorIncluded, '$Street', '$Colonia', '$EntreCalles', $CP)";
+    $sql = "INSERT INTO machines (ClientName, ClientNum, Phone, MachineName, FechaAlta, Situation, Brand, Model, MachineType, SensorIncluded, Street, Colonia, EntreCalles, CP) VALUES('$ClientName', '$ClientNum', '$Phone', '$MachineName', '$FechaAlta', '$Situation', '$Brand', '$Model', '$MachineType', $SensorIncluded, '$Street', '$Colonia', '$EntreCalles', '$CP')";
 
     ConsultaBD($sql)
 ?>

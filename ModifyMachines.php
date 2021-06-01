@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 </head>
 
@@ -195,7 +196,6 @@
         $.ajax({
             url: 'php/SelectMachineNames.php',
             type: 'POST',
-            data:ruta,
         })
         .done(function(res){
             $('#selMachine').html(res);
@@ -209,7 +209,7 @@
         .always(function() {
             console.log("complete");
         });
-    }
+    })
 
     $('#selMachine').change(function() {
         var MachineName = document.getElementById('machineName').value;
